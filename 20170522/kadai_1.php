@@ -71,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST")
   <meta charset = "UTF-8">
   <title>お問い合わせ</title>
   <meta name = "robots" content = "noindex, nofollow" />
-  <link rel = "kadai.css">
+  
 </head>
 <body>
 <link rel = "stylesheet" href = "kadai.css">
