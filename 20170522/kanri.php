@@ -6,8 +6,9 @@
         <title></title>
     </head>
     <body>
+        <link rel = "stylesheet" href = "kanri.css">
         <h1>管理画面</h1>
-            <table border = "1">
+            <table>
                 <tr>
                     <td>注文番号</td>
                     <td>姓</td>
@@ -28,7 +29,7 @@
                 {
                     print "<tr>";
 
-                    for ($i = 0; $i < count($kanrinaiyou); $i++)
+                    for ($i = 0; $i < count($kanrinaiyou) - 1; $i++)
                     {
                         mb_convert_variables("UTF-8", "SJIS-win", $kanrinaiyou[$i]);
                         print "<td>{$kanrinaiyou[$i]}\n</td>";

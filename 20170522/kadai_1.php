@@ -1,5 +1,7 @@
 <?php
 
+session_cache_limiter('private_no_expire');
+session_start();
 $sname = "";
 $fname = "";
 $seibetu = "";
@@ -66,30 +68,36 @@ if ($_SERVER["REQUEST_METHOD"] === "POST")
 }
 ?>
 <!DOCTYPE html>
+<div class = "all">
 <html lang = "jp">
 <head>
   <meta charset = "UTF-8">
   <title>お問い合わせ</title>
   <meta name = "robots" content = "noindex, nofollow" />
-  
+
 </head>
 <body>
 <link rel = "stylesheet" href = "kadai.css">
-<h1>お問い合わせ</h1>
 
+<div class = "toi">
+<h1>お問い合わせ</h1>
+<p class = "okyaku">お客様情報を入力してください。<p>
+<p class = "juyou">※すべての項目が入力必須です。</p>
+</div>
+<table>
 
   <?php if ($sousin != "true") : ?>
     <form action = "end_page.php" method = "post">
     <div class = "name">
-      <p>姓 <input type = "text" name = "sname" value = "<?php echo htmlspecialchars($sname, ENT_QUOTES, "UTF-8"); ?>" required></p>
-      <p>名 <input type = "text" name = "fname" value = "<?php echo htmlspecialchars($fname, ENT_QUOTES, "UTF-8"); ?>" required></p>
+      <p>姓<input type = "text" name = "sname" value = "<?php echo htmlspecialchars($sname, ENT_QUOTES, "UTF-8"); ?>" required></p>
+      <p>名<input type = "text" name = "fname" value = "<?php echo htmlspecialchars($fname, ENT_QUOTES, "UTF-8"); ?>" required></p>
     </div>
 
       <p style="color:red;"><?php echo $name_err; ?></p>
-    <div>
-      <p>
-          性別
-
+    <div  class = "seibetu">
+      <p class = "seibetuaa">
+          性別   </p>
+<p class = "seibetusentaku">
           男<input type = "radio" name = "seibetu" value = "男" required>
           女<input type = "radio" name = "seibetu" value = "女"required>
           不明<input type = "radio" name = "seibetu" value = "不明"required>
@@ -97,7 +105,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST")
     </div>
     <div class = "address">
       <p>
-          住所  <input type = "text" name = "address" size = "50">
+          住所  <input type = "text" name = "address" size = "50" required>
       <p>
     </div>
     <div class = "denwa">
@@ -120,9 +128,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST")
     <div>
       <p>
           どこで知ったか
+      </p>
+      <p>
 
-                            雑誌<input type = "checkbox"  name = "ans[]" value = "雑誌">
-                            新聞<input type = "checkbox"  name = "ans[]" value = "新聞">
+                            聖書<input type = "checkbox"  name = "ans[]" value = "聖書">
+                            古事記<input type = "checkbox"  name = "ans[]" value = "古事記">
+                            予知<input type = "checkbox"  name = "ans[]" value = "予知">
+                            勘<input type = "checkbox"  name = "ans[]" value = "勘">
+                            神のお告げ<input type = "checkbox"  name = "ans[]" value = "神のお告げ">
       </p>
     </div>
 
@@ -133,6 +146,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST")
           <option value = "人生について">人生について</option>
           <option value = "明日の夕飯について">明日の夕飯について</option>
           <option value = "「ああああ」について">「ああああ」について</option>
+          <option value = "タイムスリップした件">タイムスリップした件</option>
+          <option value = "塩について">塩について</option>
+          <option value = "この世のすべてについて">この世のすべてについて</option>
+          <option value = "ワームホールの作り方">ワームホールの作り方</option>
       </select>
       </p>
     </div>
@@ -141,14 +158,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST")
           質問内容<br><textarea name = "naiyou" cols = "75" rows = "10" value = "<?php echo htmlspecialchars($domain, ENT_QUOTES, "UTF-8");?>"required></textarea>
       </p>
     </div>
-    <div class = "botton">
-      <p><input type = "submit" value = "送信">
-          <input type = "reset" value = "リセット"></p>
+    <div class = "button">
+      <p><input class = "sbutton" type = "submit" value = "送信"></p>
+      <p><input class = "rbutton" type = "reset" value = "リセット"></p>
     </div>
 
     </form>
-
-
+</table>
   <?php endif; ?>
 </body>
 </html>
+</div>

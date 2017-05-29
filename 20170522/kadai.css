@@ -1,40 +1,109 @@
 *
 {
-    margin: 15px;
+    margin: 0 auto;
+    -webkit-border-radius : 5px;
+    -moz-border-radius : 5px;
+
 }
+html
+{
+
+    background: whitesmoke;
+}
+
 body
 {
-    background: white;
+    font-size: 1.4em;
+    width: 800px;
+    padding: 10px 10px 10px 15px;
+    border: 10px solid lightcyan;
+    background:  Cornsilk;
 }
 form
 {
-    background-color: Cornsilk;
-    width: 650px;
+    -webkit-border-radius : 2px;
+    -moz-border-radius : 2px;
+    background-color: LemonChiffon;
+
+
+
+    width: 750px;
     border: 3px solid gray;
 }
 div
 {
-    border: 2px solid Lightgray;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+text-align: center;
+    border: 2px solid gray;
+}
+input, select, textarea
+{
+
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    border: 2px solid lightgray;
 }
 p
 {
     padding: 5px;
 
 }
+.toi{
+    text-align: center;
+
+}
+.all2{
+
+
+	margin: 0 auto;
+}
+
+.juyou
+{
+    margin: -30px 10px 10px 10px;
+    font-size: 0.7em;
+    color: red;
+}
 .name
 {
     display: flex;
-    margin: 15px 15px -25px;
+
 }
-.address
+.seibetu
 {
-    height: 90px;
+    margin-top: -10px;
+    display: flex;
+
 }
-.denwa
+.seibetuaa, .seibetusentaku
 {
-    margin:0px 15px -50px ;
+    flex:
 }
 .mail
 {
-    margin: 0px 15px -50px ;
+    margin-bottom: -20px;
+}
+.denwa
+{
+    margin-bottom: -20px;
+}
+.button
+{
+
+    display: flex;
+}
+.sbutton, .rbutton
+{
+    font-size: 1em;
+    background-color: orange;
+    padding: 12px 20px;;
 }

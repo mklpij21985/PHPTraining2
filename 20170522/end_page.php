@@ -15,8 +15,11 @@ $mail_d = [$mailaddress, $domain];
 $mail = implode("@", $mail_d);
 $cate = htmlspecialchars($_POST["cate"], ENT_QUOTES, "UTF-8");
 $naiyou = htmlspecialchars($_POST["naiyou"], ENT_QUOTES, "UTF-8");
+$naicount = substr_count($naiyou, "\n");
 $naiyouexp = explode("\n", $naiyou);
+
 $naiyouimp = implode("/*/", $naiyouexp);
+
 
 ?>
 
@@ -32,36 +35,45 @@ $naiyouimp = implode("/*/", $naiyouexp);
         <h1>お問い合わせ内容確認</h1>
 
         <form action = "kanryou.php" method = "post">
+            <p><a>こちらの内容でお間違いなければ、確認ボタンを押してください。</a></p>
+            <p><a>修正を行う場合は、戻るボタンを押してください。</a></p>
         <div class = "name">
-        <p>姓<?php echo htmlspecialchars($sname, ENT_QUOTES, "UTF-8"); ?>
+        <p>姓:</p>
+        <p><?php echo htmlspecialchars($sname, ENT_QUOTES, "UTF-8"); ?>
             <input type = "hidden"  name = "sname" value = "<?php echo htmlspecialchars($sname, ENT_QUOTES, "UTF-8"); ?>">
         </p>
-        <p>名<?php echo htmlspecialchars($fname, ENT_QUOTES, "UTF-8"); ?>
+        <p>名:</p>
+        <p><?php echo htmlspecialchars($fname, ENT_QUOTES, "UTF-8"); ?>
                     <input type="hidden" name = "fname" value = "<?php echo htmlspecialchars($fname, ENT_QUOTES, "UTF-8"); ?>"></p>
         </div>
 
         <div>
-        <p>性別<?php echo htmlspecialchars($seibetu, ENT_QUOTES, "UTF-8"); ?>
+        <p>性別</p>
+        <p><?php echo htmlspecialchars($seibetu, ENT_QUOTES, "UTF-8"); ?>
                     <input type="hidden" name = "seibetu" value = "<?php echo htmlspecialchars($seibetu, ENT_QUOTES, "UTF-8"); ?>">
                 </p>
         </div>
         <div>
-        <p>住所<?php echo htmlspecialchars($address, ENT_QUOTES, "UTF-8"); ?>
+        <p>住所</p>
+        <p><?php echo htmlspecialchars($address, ENT_QUOTES, "UTF-8"); ?>
             <input type="hidden" name = "address" value = "<?php echo htmlspecialchars($address, ENT_QUOTES, "UTF-8"); ?>">
         </p>
         </div>
         <div>
-        <p> 電話番号<?php echo htmlspecialchars($denwa, ENT_QUOTES, "UTF-8"); ?>
+        <p> 電話番号</p>
+        <p><?php echo htmlspecialchars($denwa, ENT_QUOTES, "UTF-8"); ?>
             <input type="hidden" name = "denwa" value = "<?php echo htmlspecialchars($denwa, ENT_QUOTES, "UTF-8"); ?>">
         </p>
         </div>
         <div>
-        <p>メールアドレス<?php echo htmlspecialchars($mail, ENT_QUOTES, "UTF-8"); ?>
+        <p>メールアドレス</p>
+        <p><?php echo htmlspecialchars($mail, ENT_QUOTES, "UTF-8"); ?>
                         <input type="hidden" name = "mail" value = "<?php echo htmlspecialchars($mail, ENT_QUOTES, "UTF-8"); ?>">
         </p>
         </div>
         <div>
-        <p>どこで知ったか
+        <p>どこで知ったか</p>
+        <p>
             <?php
             if(isset($_POST["ans"]))
             {
@@ -79,21 +91,24 @@ $naiyouimp = implode("/*/", $naiyouexp);
         </p>
         </div>
         <div>
-        <p>質問カテゴリ<?php echo htmlspecialchars($cate, ENT_QUOTES, "UTF-8"); ?>
+        <p>質問カテゴリ</p>
+        <p><?php echo htmlspecialchars($cate, ENT_QUOTES, "UTF-8"); ?>
             <input type="hidden" name = "cate" value = "<?php echo htmlspecialchars($cate, ENT_QUOTES, "UTF-8"); ?>">
         </p>
         </div>
         <div>
-        <p>質問内容<?php echo htmlspecialchars($_POST["naiyou"], ENT_QUOTES, "UTF-8"); ?>
-            <input type="hidden" name = "naiyouimp" value = "<?php echo htmlspecialchars($naiyouimp, ENT_QUOTES, "UTF-8"); ?>">
+        <p>質問内容</p>
+        <p><?php echo htmlspecialchars($_POST["naiyou"], ENT_QUOTES, "UTF-8"); ?>
+            <input type="hidden" name = "naiyouimp" value = "<?php echo htmlspecialchars($naiyou, ENT_QUOTES, "UTF-8"); ?>">
+            <input type="hidden" name = "naicount" value = "<?php echo htmlspecialchars($naicount, ENT_QUOTES, "UTF-8"); ?>">
         </p>
         </div>
-        <div>
-        <input type = "submit" name = "kakunin" value = "確認">
+        <div class = "button">
+        <input class = "kakunin" type = "submit" name = "kakunin" value = "確認">
 
         <form action = "kadai_1.php" method = "post">
             <input type="hidden" name="hoge" value="<?php echo $hoge ?>">
-            <input type = "button" onclick = "history.back()" value="戻る">
+            <input class = "return" type = "button" onclick = "history.back()" value="戻る">
         </form>
         </div>
 

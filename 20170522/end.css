@@ -1,25 +1,54 @@
 *{
-    margin: 15px;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        -webkit-border-radius : 5px;
+        -moz-border-radius : 5px;
+        text-align: center;
+
+}
+
+html{
+
+
+    background: whitesmoke;
+}
+body{
+    background: lightcyan;
 }
 form{
+        border: 10px solid lightcyan;
     background-color: cornsilk;
-    width: 650px;
+    width: 700px;
     border: 3px solid gray;
 }
 div{
+    margin-left: 10px ;
+    margin-right: 10px;
+    margin-top: 10px;
     border: 2px solid black;
 }
+a
+{
+    font-size: 1.4em;
+}
 p{
+    -webkit-border-radius : 2px;
+    -moz-border-radius : 2px;
     padding: 5px;
 
 }
 body
 {
+    -webkit-border-radius : 2px;
+    -moz-border-radius : 2px;
+
     background-color: whitesmoke;
 }
-.name{
-    display: flex;
-    margin: 15px 15px;
+.name
+{
+        display: flex;
+        margin-right: 10px;
+
 }
 .address{
     height: 90px;
@@ -29,4 +58,16 @@ body
 }
 .mail{
     margin: 0px 15px -50px ;
+}
+.button{
+        display: flex;
+}
+.kakunin, .return
+{
+
+    font-size: 1em;
+    background-color: orange;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 20px 25px;;
 }
