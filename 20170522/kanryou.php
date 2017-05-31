@@ -1,4 +1,5 @@
 <?php
+
 $toiawase_ban = 0;
 $sname = htmlspecialchars($_POST["sname"], ENT_QUOTES, "UTF-8");
 $fname = htmlspecialchars($_POST["fname"], ENT_QUOTES, "UTF-8");
@@ -18,9 +19,6 @@ mb_convert_variables("UTF-8", "SJIS-win", $banget);
 $naicount = explode(",", end($banget));
 
 $banser = end($naicount);
-
-
-
 $gettoiban = explode(",", $banget[count($banget) -1 - $banser]);
 $toiawase_ban = $gettoiban[0];
 $toiawase_ban++;
@@ -46,6 +44,7 @@ fclose($fp);
         <link rel = "stylesheet" href = "kanryou.css">
         <h1>お問い合わせが完了しました。</h1>
         <p>お問い合わせ番号は   <a> <?php echo "{$toiawase_ban}"?></a>  です。</p>
-        <p><a>返信は5年後となります。気長にお待ちください。</a></p>
+        <p><a>返信には1週間ほどかかる場合がございます。</a></p>
+        <p>    <a>気長にお待ちください。</a></p>
     </body>
 </html>

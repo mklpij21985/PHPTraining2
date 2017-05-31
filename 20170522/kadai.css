@@ -1,26 +1,29 @@
 *
 {
-    margin: 0 auto;
+
+margin: 0 auto;
     -webkit-border-radius : 5px;
     -moz-border-radius : 5px;
 
 }
 html
 {
-
+margin: 0 auto;
     background: whitesmoke;
 }
 
 body
 {
+
     font-size: 1.4em;
-    width: 800px;
+    width: 700px;
     padding: 10px 10px 10px 15px;
     border: 10px solid lightcyan;
     background:  Cornsilk;
 }
 form
 {
+
     -webkit-border-radius : 2px;
     -moz-border-radius : 2px;
     background-color: LemonChiffon;
@@ -32,12 +35,13 @@ form
 }
 div
 {
+
     margin-top: 20px;
     margin-right: 20px;
     margin-left: 20px;
     margin-bottom: 20px;
-text-align: center;
-    border: 2px solid gray;
+
+
 }
 input, select, textarea
 {
@@ -57,6 +61,7 @@ p
     padding: 5px;
 
 }
+
 .toi{
     text-align: center;
 
@@ -75,18 +80,22 @@ p
 }
 .name
 {
-    display: flex;
+
 
 }
 .seibetu
 {
     margin-top: -10px;
-    display: flex;
+
 
 }
-.seibetuaa, .seibetusentaku
+.seibetuaa{
+
+}
+.seibetusentaku
 {
-    flex:
+    margin-left: -40px ;
+
 }
 .mail
 {
@@ -105,5 +114,5 @@ p
 {
     font-size: 1em;
     background-color: orange;
-    padding: 12px 20px;;
+    padding: 12px 20px;
 }
