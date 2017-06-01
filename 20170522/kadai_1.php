@@ -34,9 +34,9 @@ $domain = "";
       <p class = "seibetuaa">
           性別:
 
-          <input type = "radio" name = "seibetu" value = "男" required>男
-          <input type = "radio" name = "seibetu" value = "女"required>女
-          <input type = "radio" name = "seibetu" value = "不明"required>不明
+          <label><input type = "radio" name = "seibetu" value = "男" required>男</label>
+          <label><input type = "radio" name = "seibetu" value = "女"required>女</label>
+          <label><input type = "radio" name = "seibetu" value = "不明"required>不明</label>
       </p>
     </div>
     <div class = "address">
@@ -64,13 +64,13 @@ $domain = "";
     <div>
       <p>
           どこで知ったか</p><p>
-          <input type = "checkbox"  name = "ans[]" value = "雑誌">雑誌
-          <input type = "checkbox"  name = "ans[]" value = "新聞">新聞
-            <input type = "checkbox"  name = "ans[]" value = "聖書">聖書
-            <input type = "checkbox"  name = "ans[]" value = "古事記">古事記
-            <input type = "checkbox"  name = "ans[]" value = "予知">予知
-            <input type = "checkbox"  name = "ans[]" value = "勘">勘
-            <input type = "checkbox"  name = "ans[]" value = "神のお告げ">神のお告げ
+          <label><input type = "checkbox"  name = "ans[]" value = "雑誌">雑誌</label>
+          <label><input type = "checkbox"  name = "ans[]" value = "新聞">新聞</label>
+            <label><input type = "checkbox"  name = "ans[]" value = "聖書">聖書<label>
+            <label><input type = "checkbox"  name = "ans[]" value = "古事記">古事記</label>
+            <label><input type = "checkbox"  name = "ans[]" value = "予知">予知</label>
+            <label><input type = "checkbox"  name = "ans[]" value = "勘">勘</label>
+            <label><input type = "checkbox"  name = "ans[]" value = "神のお告げ">神のお告げ</label>
       </p>
     </div>
 
